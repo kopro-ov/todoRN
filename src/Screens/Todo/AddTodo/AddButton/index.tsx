@@ -12,7 +12,10 @@ const ButtonContainer = Styled.TouchableOpacity`
     box-shadow : 4px 4px 8px #999;
 `;
 
-const Icon = Styled.Image``;
+const Icon = Styled.Image`
+    width : 24px;
+    height : 24px;
+`;
 
 interface Props {
     onPress?: () => void;
