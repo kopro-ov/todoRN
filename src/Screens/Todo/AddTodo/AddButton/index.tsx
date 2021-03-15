@@ -13,8 +13,9 @@ const ButtonContainer = Styled.TouchableOpacity`
 `;
 
 const Icon = Styled.Image`
-    width : 24px;
-    height : 24px;
+    width : 30px;
+    height : 30px;
+    margin-bottom : 5px;
 `;
 
 interface Props {

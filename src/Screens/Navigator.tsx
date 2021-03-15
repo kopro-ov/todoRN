@@ -1,18 +1,36 @@
-import React, {useContext} from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+import React, { Component } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import Styled from 'styled-components/native';
+
+import { TodoListContextProvider } from '~/Context/TodoListContext';
 
 import Home from './Home';
-import Todo from './Todo'
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import Todo from './Todo';
+import Login from './Login';
 
-const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
+const Container = Styled.View`
+  flex : 1;
+  background-color = #EEE;
+`;
 
-const TodoNavigator = () => {
+class TodoList extends Component {
+    render () {
+        return (
+            <TodoListContextProvider>
+                <Container>
+                    <Todo />
+                </Container>
+            </TodoListContextProvider>
+        )
+    }
+}
+
+const ScreenNavigator = () => {
     return (
         <NavigationContainer>
             <Tab.Navigator
@@ -27,15 +45,20 @@ const TodoNavigator = () => {
                             iconName = focused ? 'today' : 'today-outline'
                         }
 
-                        return <Ionicons name={iconName} size={30}  color={Colors.tabIconSelected}/>;
+                        if(route.name === "Login") {
+                            iconName = focused ? 'person' : 'person-outline'
+                        }
+
+                        return <Ionicons name={iconName} size={30}  color='#222'/>;
                     }
                 })}
             >
                 <Tab.Screen name="Home" component={Home} />
-                <Tab.Screen name="Todo" component={Todo} />
+                <Tab.Screen name="Todo" component={TodoList} />
+                <Tab.Screen name="Login" component={Login} />
             </Tab.Navigator>
         </NavigationContainer>    
     )
 };
 
-export default TodoNavigator;
+export default ScreenNavigator;
