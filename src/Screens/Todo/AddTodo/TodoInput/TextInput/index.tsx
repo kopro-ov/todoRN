@@ -21,7 +21,7 @@ const TextInput = ({ hideTodoInput } : Props) => {
             autoFocus={true}
             autoCapitalize="none"
             autoCorrect={false}
-            placeholder="할 일을 입력하세요."
+            placeholder="할 일을 입력해 주세요."
             returnKeyType="done"
             onSubmitEditing={({ nativeEvent }) => {
                 addTodoList(nativeEvent.text);

@@ -10,7 +10,7 @@ const Container = Styled.View`
 interface Props {}
 
 const Todo = ({ } : Props) => {
-    return (
+    return (        
         <Container>
             <TodoListView />
             <AddTodo />

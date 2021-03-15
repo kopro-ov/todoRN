@@ -1,12 +1,5 @@
 import React, { Fragment } from 'react';
-import { StatusBar, SafeAreaView } from 'react-native';
-import {
-  Header, 
-  LearnMoreLinks, 
-  Colors, 
-  DebugInstructions, 
-  ReloadInstructions
-} from 'react-native/Libraries/NewAppScreen';
+import Navigator from '~/Screens/Navigator';
 
 import Styled from 'styled-components/native';
 
@@ -20,11 +13,16 @@ const Container = Styled.View`
 
 const App = () =>  {
   return (
-    <TodoListContextProvider>
-      <Container>
-        <Todo />
-      </Container>
-    </TodoListContextProvider>
+    <>
+      {/** 
+      <TodoListContextProvider>
+        <Container>
+          <Todo />
+        </Container>
+      </TodoListContextProvider>
+      */}
+      <Navigator />
+    </>
   );
 };
 
