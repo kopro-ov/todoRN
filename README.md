@@ -12,11 +12,11 @@ $react-native run-android
 ```shell
 $react-native run-ios
 ```
-## 화면
-### todo List
-![ex_screenshot](20210316_1237.PNG)
-### login screen
-![ex_screenshot](20210316_2092.PNG)
-## 기능
+## 주요 기능
 - ScreenNavigator 
 - Todo List
+## 화면
+### android
+![ex_screenshot](Honeycam 2021-03-16 16-49-12.gif)
+### ios
+![ex_screenshot](20210316_2092.PNG)
