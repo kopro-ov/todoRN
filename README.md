@@ -17,6 +17,5 @@ $react-native run-ios
 - Todo List
 ## 화면
 ### android
-![ex_screenshot](2021-03-16 16-49-12.gif)
+![ex_screenshot](https://raw.githubusercontent.com/kopro-ov/todoRN/master/2021-03-16%2016-49-12.gif)
 ### ios
-![ex_screenshot](20210316_2092.PNG)
