@@ -17,6 +17,6 @@ $react-native run-ios
 - Todo List
 ## 화면
 ### android
-![ex_screenshot](Honeycam 2021-03-16 16-49-12.gif)
+![ex_screenshot](./Honeycam 2021-03-16 16-49-12.gif)
 ### ios
 ![ex_screenshot](20210316_2092.PNG)
